@@ -451,10 +451,10 @@ class Prep():
         filelist = []
         videoloc = os.path.abspath(videoloc)
         if os.path.isdir(videoloc):
-            globlist = glob.glob1(videoloc, "*.mkv") + glob.glob1(videoloc, "*.mp4") + glob.glob1(videoloc, "*.ts")
+            globlist = glob.glob(f"{videoloc}{os.sep}**{os.sep}*.mkv", recursive=True) + glob.glob(f"{videoloc}{os.sep}**{os.sep}*.mp4", recursive=True) + glob.glob(f"{videoloc}{os.sep}**{os.sep}*.ts", recursive=True)
             for file in globlist:
                 if not file.lower().endswith('sample.mkv') or "!sample" in file.lower():
-                    filelist.append(os.path.abspath(f"{videoloc}{os.sep}{file}"))
+                    filelist.append(os.path.abspath(file))
             try:
                 video = sorted(filelist)[0]       
             except IndexError:
@@ -1932,18 +1932,18 @@ class Prep():
         piece_size_max = int(piece_size_max) if piece_size_max is not None else 0
         if meta['isdir'] == True:
             os.chdir(path)
-            globs = glob.glob1(path, "*.mkv") + glob.glob1(path, "*.mp4") + glob.glob1(path, "*.ts")
+            globs = glob.glob(f"{path}{os.sep}**{os.sep}*.mkv", recursive=True) + glob.glob(f"{path}{os.sep}**{os.sep}*.mp4", recursive=True) + glob.glob(f"{path}{os.sep}**{os.sep}*.ts", recursive=True) + glob.glob(f"{path}{os.sep}**{os.sep}*.nfo", recursive=True)
             no_sample_globs = []
             for file in globs:
                 if not file.lower().endswith('sample.mkv') or "!sample" in file.lower():
-                    no_sample_globs.append(os.path.abspath(f"{path}{os.sep}{file}"))
+                    no_sample_globs.append(os.path.abspath(file))
             if len(no_sample_globs) == 1:
                 path = meta['filelist'][0]
         if meta['is_disc']:
             include, exclude = "", ""
         else:
             exclude = ["*.*", "*sample.mkv", "!sample*.*"] 
-            include = ["*.mkv", "*.mp4", "*.ts"]
+            include = ["*.mkv", "*.mp4", "*.ts", "*.nfo"]
         torrent = Torrent(path,
             trackers = ["https://fake.tracker"],
             source = "L4G",

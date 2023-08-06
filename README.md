@@ -28,11 +28,12 @@ A simple tool to take the work out of uploading.
 
 ## **Setup:**
    - **REQUIRES AT LEAST PYTHON 3.7 AND PIP3**
+   - **MAXIMUM PYTHON 3.9 FOR WINDOWS**
    - Needs [mono](https://www.mono-project.com/) on linux systems for BDInfo
    - Also needs MediaInfo and ffmpeg installed on your system
       - On Windows systems, ffmpeg must be added to PATH (https://windowsloop.com/install-ffmpeg-windows-10/)
       - On linux systems, get it from your favorite package manager
-   - Clone the repo to your system `git clone https://github.com/L4GSP1KE/Upload-Assistant.git`
+   - Clone the repo to your system `git clone https://github.com/IamMika23/Upload-Assistant.git`
    - Copy and Rename `data/example-config.py` to `data/config.py`
    - Edit `config.py` to use your information (more detailed information in the [wiki](https://github.com/L4GSP1KE/Upload-Assistant/wiki))
       - tmdb_api (v3) key can be obtained from https://developers.themoviedb.org/3/getting-started/introduction
