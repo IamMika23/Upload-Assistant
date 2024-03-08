@@ -27,7 +27,7 @@ A simple tool to take the work out of uploading.
   
 
 ## **Setup:**
-   - **REQUIRES AT LEAST PYTHON 3.7 AND PIP3**
+   - **REQUIRES AT LEAST PYTHON 3.8 AND PIP3**
    - **MAXIMUM PYTHON 3.9 FOR WINDOWS**
    - Needs [mono](https://www.mono-project.com/) on linux systems for BDInfo
    - Also needs MediaInfo and ffmpeg installed on your system
