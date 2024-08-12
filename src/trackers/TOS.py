@@ -52,7 +52,7 @@ class TOS():
                 'REMUX': '2',
                 'ENCODE': '3',
                 'WEBDL': '4',
-                'WEBRIP': '5',
+                'WEBRIP': '4',
                 'HDTV': '6'
                 }.get(type, '0')
         return type_id
