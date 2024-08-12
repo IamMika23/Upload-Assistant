@@ -41,7 +41,8 @@ config = {
             "useAPI" : True, # Set to True if using TOS
             "api_key" : "TOS api key",
             "announce_url" : "https://theoldschool.cc/announce/customannounceurl",
-            # "anon" : "False"
+            # "anon" : False
+            # "internal": False
         },
         "BLU" : {
             "useAPI" : False, # Set to True if using BLU

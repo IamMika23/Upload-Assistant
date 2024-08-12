@@ -155,8 +155,7 @@ class TOS():
             'sticky' : 0,
         }
         # Internal
-        if self.config['TRACKERS'][self.tracker].get('internal', False) == True:
-            if meta['tag'] != "" and (meta['tag'][1:] in self.config['TRACKERS'][self.tracker].get('internal_groups', [])):
+        if meta[internal] == True or self.config['TRACKERS'][self.tracker].get('internal', False) == True:
                 data['internal'] = 1
 
         if region_id != 0:

@@ -82,6 +82,9 @@ class Args():
         parser.add_argument('-cleanup', '--cleanup', action='store_true', required=False, help="Clean up tmp directory")
 
         parser.add_argument('-fl', '--freeleech', nargs='*', required=False, help="Freeleech Percentage", default=0, dest="freeleech")
+
+        # TOS
+        parser.add_argument('-int', '--internal', action='store_true', required=False, help="Upload with iNTERNAL flag")
         args, before_args = parser.parse_known_args(input)
         args = vars(args)
         # console.print(args)
