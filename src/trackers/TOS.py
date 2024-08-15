@@ -155,7 +155,7 @@ class TOS():
             'sticky' : 0,
         }
         # Internal
-        if meta['internal'] == True or self.config['TRACKERS'][self.tracker].get('internal', False) == True:
+        if meta['exclusive'] == True or self.config['TRACKERS'][self.tracker].get('exclusive', False) == True:
                 data['internal'] = 1
 
         if region_id != 0:

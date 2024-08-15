@@ -38,11 +38,11 @@ config = {
 #        "default_trackers" : "BLU, BHD, AITHER, STC, STT, SN, THR, R4E, HP, ACM, PTP, LCD, LST, PTER, NBL, ANT, MTV",
 
         "TOS" : {
-            "useAPI" : True, # Set to True if using TOS
+            "useAPI" : True,  # Set to True if using TOS
             "api_key" : "TOS api key",
             "announce_url" : "https://theoldschool.cc/announce/customannounceurl",
-            # "anon" : False
-            # "internal": False
+            # "anon" : False  # Anonymous upload
+            # "exclusive": False  # Upload with Exclusive flag
         },
         "BLU" : {
             "useAPI" : False, # Set to True if using BLU
